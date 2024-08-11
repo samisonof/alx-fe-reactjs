@@ -7,10 +7,18 @@ import WelcomeMessage from './WelcomeMessage'
 function App() {
   const [count, setCount] = useState(0)
 
+  function App() {
+    return (
+        <div className="App">
+            <WelcomeMessage />
+        </div>
+    );
+}
+
+
   return (
     <>
-    <WelcomeMessage />
-      <div>
+        <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>

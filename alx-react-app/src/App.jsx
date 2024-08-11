@@ -7,20 +7,19 @@ import Header from './Header';
 import MainContent from './MainContent';
 import Footer from './Footer';
 
+
+function App() {
+  return (
+      <div className="App">
+          <WelcomeMessage />
+      </div>
+  );
+}
+
 function App() {
   const [count, setCount] = useState(0)
 
-
-  function App() {
-    return (
-        <div className="App">
-            <WelcomeMessage />
-        </div>
-    );
-}
-
-
-
+  
   return (
     <>
         <div>

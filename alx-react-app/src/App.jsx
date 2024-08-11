@@ -17,6 +17,17 @@ function App() {
 }
 
 function App() {
+  return (
+      <div className="App">
+          <Header />
+          <MainContent />
+          <Footer />
+      </div>
+  );
+}
+
+
+function App() {
   const [count, setCount] = useState(0)
 
 

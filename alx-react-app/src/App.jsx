@@ -11,6 +11,16 @@ function App() {
   const [count, setCount] = useState(0)
 
 
+  function App() {
+    return (
+        <div className="App">
+            <WelcomeMessage />
+        </div>
+    );
+}
+
+
+
   return (
     <>
         <div>
@@ -22,11 +32,6 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-
-      <div className='App'>
-      <WelcomeMessage/>
-
-    </div>
 
 
 

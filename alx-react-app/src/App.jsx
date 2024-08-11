@@ -19,7 +19,7 @@ function App() {
 function App() {
   const [count, setCount] = useState(0)
 
-  
+
   return (
     <>
         <div>
@@ -33,22 +33,6 @@ function App() {
       <h1>Vite + React</h1>
 
 
-
-<div className='App'>
-      <Header/>
-
-    </div>
-
-    <div className='App'>
-      <MainContent/>
-
-    </div>
-
-
-    <div className='App'>
-      <Footer/>
-
-    </div>
 
      
     </>

@@ -12,5 +12,6 @@ function UserDetails() {
     </div>
   );
 }
+console.log(userData);
 
 export default UserDetails;

@@ -7,7 +7,7 @@ import Header from './Header';
 import MainContent from './MainContent';
 import Footer from './Footer';
 import UserProfile from './UserProfile';
-
+import Counter from './Counter';
 
 <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
 
@@ -32,20 +32,6 @@ function App() {
 
 function App() {
   const [count, setCount] = useState(0)
-  
-  function Counter() {
-    const [count, setCount] = useState(0);
-
-    return (
-      <div>
-        <p>Current Count: {count}</p>
-        <button onClick={() => setCount(count + 1)}>Increment</button>
-        <button onClick={() => setCount(count - 1)}>Decrement</button>
-        <button onClick={() => setCount(0)}>Reset</button>
-      </div>
-    );
-  }
-
 
   return (
     <>

@@ -1,17 +1,20 @@
 import React from 'react';
-import UserContext from './UserContext';
-import ProfilePage from './ProfilePage';
+import UserContext from './UserContext';  // Import UserContext
+import ProfilePage from './ProfilePage';  // Import ProfilePage
 
 function App() {
-  const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
+  // Define userData that will be passed to the context
+  const userData = {
+    name: "Jane Doe",
+    email: "jane.doe@example.com"
+  };
 
-  return <ProfilePage userData={userData} />;
-  (
+  // Wrap ProfilePage inside UserContext.Provider and pass userData as value
+  return (
     <UserContext.Provider value={userData}>
-        <ProfilePage />
+      <ProfilePage />
     </UserContext.Provider>
-);
-
+  );
 }
 
 export default App;

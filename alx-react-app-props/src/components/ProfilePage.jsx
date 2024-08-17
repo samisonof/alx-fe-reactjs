@@ -1,24 +1,13 @@
-import UserInfo from './UserInfo';
+import React from 'react';
+import UserDetails from './UserDetails';
 
 function ProfilePage() {
-  return <UserInfo />;
+  return (
+    <div>
+      <h1>Profile Page</h1>
+      <UserDetails />  {/* UserDetails will consume the UserContext */}
+    </div>
+  );
 }
-
-function App() {
-    const userData = {
-        name: 'John Doe',
-        location: 'New York, USA',
-        age: 30
-    };
-
-    return (
-        <UserContext.Provider value={userData}>
-            <ProfilePage />
-        </UserContext.Provider>
-    );
-}
-
 
 export default ProfilePage;
-
-

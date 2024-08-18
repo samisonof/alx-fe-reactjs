@@ -8,9 +8,12 @@ function Navbar() {
   };
 
   const linkStyle = {
+    display: 'flex',
     color: '#fff',
     margin: '0 10px',
     textDecoration: 'none',
+    justifyContent: 'center',
+    alignItems: 'center',
   };
 
   return (

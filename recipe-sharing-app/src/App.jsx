@@ -1,6 +1,8 @@
 import React from 'react';
-import RecipeList from './components/RecipeList.jsx';
-import AddRecipeForm from './components/AddRecipeForm.jsx/index.js';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import RecipeList from './components/RecipeList';
+import AddRecipeForm from './components/AddRecipeForm';
+import RecipeDetails from './components/RecipeDetails';
 import useRecipeStore from './stores/useRecipeStore';
 
 function App() {
@@ -8,11 +10,25 @@ function App() {
   const addRecipe = useRecipeStore((state) => state.addRecipe);
 
   return (
-    <div>
-      <h1>My Recipe App</h1>
-      <AddRecipeForm addRecipe={addRecipe} />
-      <RecipeList recipes={recipes} />
-    </div>
+    <Router>
+      <div>
+        <h1>My Recipe App</h1>
+        <Routes>
+          {/* Home route displaying AddRecipeForm and RecipeList */}
+          <Route
+            path="/"
+            element={
+              <>
+                <AddRecipeForm addRecipe={addRecipe} />
+                <RecipeList recipes={recipes} />
+              </>
+            }
+          />
+          {/* Route for displaying recipe details */}
+          <Route path="/recipes/:id" element={<RecipeDetails />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -5,10 +5,11 @@ const EditRecipeForm = ({ recipeId, initialRecipeName, onClose }) => {
   const [updatedRecipeName, setUpdatedRecipeName] = useState(initialRecipeName);
   const updateRecipe = useRecipeStore((state) => state.updateRecipe);
 
+  // Handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault(); // Prevent the default form submission
     if (updatedRecipeName.trim()) {
-      updateRecipe(recipeId, updatedRecipeName); // Call updateRecipe action
+      updateRecipe(recipeId, updatedRecipeName); // Update the recipe with the new name
       onClose(); // Close the form after submission
     }
   };

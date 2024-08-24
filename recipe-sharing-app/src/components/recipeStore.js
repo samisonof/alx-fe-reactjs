@@ -22,6 +22,12 @@ const useRecipeStore = create((set) => ({
         recipe.id === id ? { ...recipe, name: updatedName } : recipe
       ),
     })),
+ 
+ // Set the entire recipes list
+ setRecipes: (newRecipes) =>
+    set(() => ({
+      recipes: newRecipes,
+    })),
 }));
 
 export default useRecipeStore;

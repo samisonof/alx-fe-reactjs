@@ -5,7 +5,7 @@ import AddRecipeForm from './components/AddRecipeForm';
 import RecipeDetails from './components/RecipeDetails';
 import EditRecipeForm from './components/EditRecipeForm';
 import useRecipeStore from './stores/useRecipeStore';
-
+import SearchBar from './components/SearchBar'
 function App() {
   const recipes = useRecipeStore((state) => state.recipes);
   const addRecipe = useRecipeStore((state) => state.addRecipe);
@@ -14,6 +14,7 @@ function App() {
     <Router>
       <div>
         <h1>My Recipe App</h1>
+        <SearchBar/>
         <Routes>
           {/* Home route displaying AddRecipeForm and RecipeList */}
           <Route
@@ -30,6 +31,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+
   );
 }
 

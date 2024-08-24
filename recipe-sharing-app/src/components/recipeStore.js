@@ -28,6 +28,15 @@ const useRecipeStore = create((set) => ({
     set(() => ({
       recipes: newRecipes,
     })),
+
+     // Set search term and trigger filtering
+  setSearchTerm: (term) => set({ searchTerm: term }),
+
+  // Derived state: Filtered recipes based on the search term
+  filteredRecipes: () =>
+    get().recipes.filter((recipe) =>
+      recipe.title.toLowerCase().includes(get().searchTerm.toLowerCase())
+    ),
 }));
 
 export default useRecipeStore;

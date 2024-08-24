@@ -5,7 +5,7 @@ import AddRecipeForm from './components/AddRecipeForm';
 import RecipeDetails from './components/RecipeDetails';
 import EditRecipeForm from './components/EditRecipeForm';
 import useRecipeStore from './stores/useRecipeStore';
-import SearchBar from './components/SearchBar'
+import SearchBar from './components/SearchBar';
 function App() {
   const recipes = useRecipeStore((state) => state.recipes);
   const addRecipe = useRecipeStore((state) => state.addRecipe);

@@ -15,6 +15,7 @@ function App() {
       <div>
         <h1>My Recipe App</h1>
         <SearchBar/>
+        <RecommendationsList />
         <Routes>
           {/* Home route displaying AddRecipeForm and RecipeList */}
           <Route

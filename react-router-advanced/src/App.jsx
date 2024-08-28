@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Profile from "./components/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
+import BlogPost from "./components/BlogPost";
 
 const App = () => {
   const isAuthenticated = true

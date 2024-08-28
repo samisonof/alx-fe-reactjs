@@ -11,10 +11,19 @@ const RegistrationForm = () => {
 
         // Basic validation
 
-        if (!username || !email || !password) {
-            setError('All fields are required');
+        if (!username) {
+            setError('Username is required');
             return; 
         }
+        if (!email) {
+            setError('Email is required');
+            return;
+        }
+        if (password) {
+            setError('Password is required');
+            return;
+        } 
+
         setError('')
 
         // Handle form submission logic here (e.g., send data to an API)

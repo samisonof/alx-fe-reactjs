@@ -19,7 +19,7 @@ const RegistrationForm = () => {
             setError('Email is required');
             return;
         }
-        if (password) {
+        if (!password) {
             setError('Password is required');
             return;
         } 

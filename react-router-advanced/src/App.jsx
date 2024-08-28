@@ -10,7 +10,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/Profile/*" element={<Profile />}/>
+        <Route path="/profile/*" element={<Profile />}/>
         <Route path="/blog/:postId" element={<BlogPost />} />
         <Route path="/blog/:id" element={<BlogPost />} /> 
         <Route path="/Profile/*" element={<ProtectedRoute isAuthenticated={isAuthenticated}>

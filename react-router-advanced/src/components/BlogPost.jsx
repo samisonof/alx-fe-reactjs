@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 const BlogPost = () => {
-    const {blog:id } = useParams();
+    const {id } = useParams();
     
     return (
         <div>

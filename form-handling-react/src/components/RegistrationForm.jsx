@@ -24,7 +24,7 @@ const RegistrationForm = () => {
             return;
         } 
 
-        setError('')
+        setErrors('')
 
         // Handle form submission logic here (e.g., send data to an API)
          

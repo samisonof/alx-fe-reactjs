@@ -6,6 +6,7 @@ const TodoList = ({ todos, toggleTodo, deleteTodo }) => {
   }
 
   return (
+    
     <ul>
       {todos.map((todo) => (
         <li key={todo.id} style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import TodoList from '../components/TodoList';
 
@@ -32,6 +33,6 @@ describe('TodoList Component', () => {
     const todos = [{ id: 1, text: 'Learn React', completed: false }];
     const { asFragment } = render(<TodoList todos={todos} toggleTodo={() => {}} deleteTodo={() => {}} />);
     expect(asFragment()).toMatchSnapshot();
-    
+
   });
 });

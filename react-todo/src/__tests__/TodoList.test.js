@@ -32,5 +32,6 @@ describe('TodoList Component', () => {
     const todos = [{ id: 1, text: 'Learn React', completed: false }];
     const { asFragment } = render(<TodoList todos={todos} toggleTodo={() => {}} deleteTodo={() => {}} />);
     expect(asFragment()).toMatchSnapshot();
+    
   });
 });

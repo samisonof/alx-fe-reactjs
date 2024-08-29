@@ -1,25 +1,23 @@
-import React, {useState} from "react";
+import React from 'react';
 
-const TodoList = () => {
-    const[todos, setTodos] = useState([
-        {id: 1, text: 'Learn React', completed: false},
-        {id: 2, text: 'Build a Todo App', completed: false},
-    ]);
-    const toggleTodo = (id) => {
-        setTodos(todos.filter(todo => todo.id !==id));
+const TodoList = ({ todos, toggleTodo, deleteTodo }) => {
+  if (todos.length === 0) {
+    return <p>No todos available</p>;
+  }
 
-    }
   return (
     <ul>
-        {todos.map(todo => (
-            <li key={todo.id} style={{ textDecoration: todo.completed ? 'line-through' : 'none'}}>
-                <span onClick={() => toggleTodo(todo.id)}>{todo.text}</span>
-                <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-            </li>
-        ))}
+      {todos.map((todo) => (
+        <li key={todo.id} style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+          {todo.text}
+          <button onClick={() => toggleTodo(todo.id)}>
+            {todo.completed ? 'Undo' : 'Complete'}
+          </button>
+          <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+        </li>
+      ))}
     </ul>
-    
   );
 };
 
-export default TodoList
+export default TodoList;

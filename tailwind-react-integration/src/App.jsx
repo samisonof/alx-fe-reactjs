@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css"; // Import Tailwind CSS
-
+import UserProfile from "./components/UserProfile";
 function App() {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">

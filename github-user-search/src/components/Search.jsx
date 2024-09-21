@@ -16,7 +16,7 @@ const Search = () => {
     setUsers([]);
 
     try {
-      const data = await fetchAdvancedUserData({ username, location, minRepos });
+      const data = await fetchUserData({ username, location, minRepos });
       setUsers(data.items); // GitHub search returns the result inside an 'items' key
       setLoading(false);
     } catch (error) {

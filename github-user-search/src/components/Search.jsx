@@ -21,13 +21,10 @@ const Search = () => {
       setLoading(false);
     } catch (error) {
       if (error.message === 'User not found') {
-        setError('Looks like we can’t find the user');
+        setError('Looks like we cant find the user');
       } else {
         setError('An error occurred while fetching the data');
       }
-
-      setLoading(false);
-      setError('An error occurred while fetching the data');
       setLoading(false);
     }
   };

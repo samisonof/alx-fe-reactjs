@@ -11,15 +11,23 @@ const Search = () => {
     event.preventDefault();
     setLoading(true);
     setError(null); // Clear any previous error messages
-    setUser(null); // Clear previous user data
+    setUser(null);  // Clear previous user data
 
     try {
       const data = await fetchUserData(username);
       setUser(data);
       setLoading(false);
     } catch (error) {
-      // Handle API error (like 404 for user not found)
-      setError("Looks like we can’t find the user");
+      // Log error to console for debugging purposes
+      console.error('Error:', error.message);
+
+      // Display a specific error message for user not found, or a generic error
+      if (error.message === 'User not found') {
+        setError('Looks like we can’t find the user');
+      } else {
+        setError('An error occurred while fetching the data');
+      }
+
       setLoading(false);
     }
   };

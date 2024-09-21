@@ -10,15 +10,17 @@ const Search = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
-    setError(null);
+    setError(null); // Clear any previous error messages
+    setUser(null); // Clear previous user data
+
     try {
       const data = await fetchUserData(username);
       setUser(data);
       setLoading(false);
     } catch (error) {
+      // Handle API error (like 404 for user not found)
       setError('Looks like we can’t find the user');
       setLoading(false);
-      setUser(null);
     }
   };
 
@@ -33,6 +35,7 @@ const Search = () => {
         />
         <button type="submit">Search</button>
       </form>
+
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {user && (

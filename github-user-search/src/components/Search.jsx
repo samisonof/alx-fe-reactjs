@@ -19,7 +19,7 @@ const Search = () => {
       setLoading(false);
     } catch (error) {
       // Handle API error (like 404 for user not found)
-      setError('Looks like we can’t find the user');
+      setError("Looks like we can’t find the user");
       setLoading(false);
     }
   };

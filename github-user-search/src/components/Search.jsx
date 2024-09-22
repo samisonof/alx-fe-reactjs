@@ -47,6 +47,7 @@ const Search = () => {
           className="p-2 border border-gray-300 rounded"
         />
         <input
+        
           type="number"
           placeholder="Minimum Repositories"
           value={minRepos}
@@ -79,5 +80,6 @@ const Search = () => {
     </div>
   );
 };
+
 
 export default Search;
